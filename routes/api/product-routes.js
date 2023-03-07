@@ -29,7 +29,7 @@ router.get("/", (req, res) => {
 
 // get one product
 router.get("/:id", (req, res) => {
-  // find a single product by its `id`
+  // find a single product
   Product.findOne({
     where: {
       id: req.params.id,
@@ -136,7 +136,7 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  // delete one product by its `id` value
+  // delete one product
   Product.destroy({
     where: {
       id: req.params.id,
